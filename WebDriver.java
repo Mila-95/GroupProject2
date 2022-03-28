@@ -1,23 +1,23 @@
 package com.syntax.GroupProject2;
 
-public interface WebDriver{
+public interface WebDriver {
 
     void open();
     void close();
     String getTitle();
 
 }
-interface RemoteWebDriver extends com.syntax.Project.WebDriver {
+interface RemoteWebDriver extends WebDriver{
 
     void navigate();
 
 
 }
-interface TakeScreenShot extends com.syntax.Project.RemoteWebDriver {
+interface TakeScreenShot extends RemoteWebDriver {
 
     void getScreenShot();
 }
-class ChromeDriver implements com.syntax.Project.RemoteWebDriver {
+class ChromeDriver implements RemoteWebDriver {
 
     @Override
     public void open() {
@@ -40,7 +40,7 @@ class ChromeDriver implements com.syntax.Project.RemoteWebDriver {
     }
 }
 
-class FirefoxDriver implements com.syntax.Project.RemoteWebDriver {
+class FirefoxDriver implements RemoteWebDriver {
 
     @Override
     public void open() {
@@ -62,7 +62,7 @@ class FirefoxDriver implements com.syntax.Project.RemoteWebDriver {
 
     }
 }
-class SafariDriver implements com.syntax.Project.RemoteWebDriver {
+class SafariDriver implements RemoteWebDriver {
 
     @Override
     public void open() {
@@ -84,4 +84,3 @@ class SafariDriver implements com.syntax.Project.RemoteWebDriver {
 
     }
 }
-
