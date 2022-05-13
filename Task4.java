@@ -47,11 +47,11 @@ public class Task4 {
         return true;
     }
     public static void main(String[] args) {
-        com.syntax.Project.Task4 obj = new com.syntax.Project.Task4();
 
-        System.out.println(obj.isEmailValid("test@yahoo.com"));
-        System.out.println(obj.isUserNameValid("dato"));
-        System.out.println(obj.isPasswordValid("dato"));
+
+       // System.out.println(obj.isEmailValid("test@yahoo.com"));
+        //System.out.println(obj.isUserNameValid("dato"));
+        //System.out.println(obj.isPasswordValid("dato"));
     }
 
 }
